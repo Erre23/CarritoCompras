@@ -8,7 +8,7 @@ initApp();
 function initApp(){
     //Listener Escoger Item
     cursos.addEventListener('click', comprarCurso);
-    listaCarrito.addEventListener('click', eliminarCurso);
+    listaCarrito.addEventListener('click', eliminarCurso_Click);
     vaciarCarrito.addEventListener('click', vaciarCarrito_Click)
 }
 
@@ -51,7 +51,7 @@ function inserCarrito(curso){
     listaCarrito.appendChild(row);
 }
 
-function eliminarCurso(e) {
+function eliminarCurso_Click(e) {
     e.preventDefault();
     let curso = e.target.parentElement.parentElement;
     listaCarrito.removeChild(curso);
